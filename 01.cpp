@@ -18,15 +18,6 @@ int main(void) {
 	cout << "Your input is: " << input;
 
 
-
-
-
-
-
-
-
-
-
 	cout << "\n\n\n";
 	system("pause");
 	return 0;

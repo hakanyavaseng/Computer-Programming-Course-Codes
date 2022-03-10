@@ -7,17 +7,12 @@ void printArray(int[], int);
 void updateZero(int[], int);
 void reverseArray(int [], int size);
 void initializeRandomArray(int [], int size);
+void swap(int* xp, int* yp);
+void bubbleSort(int [], int);
 
 int main(void) {
 
 	int myArray[10] = { 0 }; 
-
-
-	//initializeArray(myArray, SIZE);
-	//printArray(myArray, SIZE);
-	
-	//updateZero(myArray, SIZE);
-	//printArray(myArray, SIZE);
 
 	initializeRandomArray(myArray, 10);
 	printArray(myArray, 10);
@@ -25,6 +20,8 @@ int main(void) {
 	reverseArray(myArray, 10);
 	printArray(myArray, 10);
 
+	bubbleSort(myArray, 10);
+	printArray(myArray, 10);
 
 	
 
@@ -53,7 +50,6 @@ void initializeRandomArray(int array[], int size) {
 	}
 
 }
-
 void printArray(int array[], int size) {
 
 	for (int i = 0; i < size; i++) {
@@ -84,4 +80,23 @@ void reverseArray(int array[], int size) {
 	}
 
 	cout << "-------------ARRAY REVERSED!-------------\n\n";
+}
+void swap(int* xp, int* yp)
+{
+	//Using pointer for bubble sort alghoritm.
+	int temp = *xp;
+	*xp = *yp;
+	*yp = temp;
+}
+void bubbleSort(int array[], int size)
+{
+	//Bubble sort alghoritm which is developed lately.
+	int i, j;
+	for (i = 0; i < size - 1; i++)
+		for (j = 0; j < size - i - 1; j++)
+			if (array[j] > array[j + 1])
+				swap(&array[j], &array[j + 1]);
+
+	cout << "-------------ARRAY SORTED!-------------\n\n";
+
 }

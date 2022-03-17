@@ -1,30 +1,29 @@
 //Multidimensional Arrays Examples
 #include <iostream>
 using namespace std;
-
+#define SIZE 3
 
 
 int main(void) {
 
-	int myArray[3][3] = {0};
+	int myArray[SIZE][SIZE] = {0};
 
 
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < SIZE; i++)
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < SIZE; j++)
 		{
-			cout << "Please enter elements: ";
+			cout << "Please enter elements " << "a" << i << j << ": ";
 			cin >> myArray[i][j];
 
 		}
 	}
 
-
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < SIZE; i++)
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < SIZE; j++)
 		{
-			cout << myArray[i][j];
+			cout << myArray[i][j] << "\t";
 
 		}
 

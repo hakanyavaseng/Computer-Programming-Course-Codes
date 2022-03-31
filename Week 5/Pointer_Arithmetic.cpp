@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 
-	int A[10] = {0,1,2,3,4,5,6,7,8,9};
+	int A[20] = {0,1,2,3,4,5,6,7,8,9};
 	int* ptrA = &A[0];
 
 	cout << "Address of A: " << &A << "\nAddress of ptrA: " << ptrA << endl;
@@ -36,6 +36,16 @@ int main() {
 
 
 	}
+
+	cout << "\n\n";
+
+
+	if (&A[5] == A + 5) // Name of the an array is a pointer, so arithmetic operations can be done.
+		cout << "True.";
+
+
+
+
 
 
        

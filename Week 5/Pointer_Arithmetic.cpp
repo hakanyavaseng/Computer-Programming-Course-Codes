@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 
-	int A[10] = {0,1,2,3,150,5,6,7,8,9};
+	int A[10] = {0,1,2,3,4,5,6,7,8,9};
 	int* ptrA = &A[0];
 
 	cout << "Address of A: " << &A << "\nAddress of ptrA: " << ptrA << endl;
@@ -22,6 +22,21 @@ int main() {
 
 	cout << "ptrB = " << ptrB << "\nptrA = " << ptrA << endl;
 	cout << "ptrB - ptrA = "<< ptrB - ptrA << endl; // Aradaki byte farkını değil, türe göre kaç birim geri gitmesi gerektiğini gösteriyor.
+
+	cout << "\n\n";
+
+
+	// Printing array using pointer
+
+	ptrA = &A[0];
+
+	for (ptrA = &A[0]; ptrA < &A[10]; ptrA++) {
+
+		cout << *ptrA << "  ";
+
+
+	}
+
 
        
 

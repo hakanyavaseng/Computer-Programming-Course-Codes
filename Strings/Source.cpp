@@ -27,17 +27,14 @@ int main(void)
 	
 	// gets(str2); Dangerous to use and removed from C++.
     
-	cin >> str2; // Boþluklarý almýyor.
+	cin.getline(str2, 49);
 	printf("%s\n", str2);
-
-	cin.clear();
-	cin.ignore();
 
 	char str3[50];
 
 
 	cout << "Please enter a string up to 49 characters: ";
-	cin.getline(str3, 49);
+	cin.getline(str3, 10);
 	printf("%s\n", str3);
 
 

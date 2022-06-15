@@ -12,8 +12,13 @@ int main(void)
 
 	puts(str1); // Otomatik olarak boþluk ekler.
 	printf("%s\n", str1); // Alta geçmesi için new line gerekiyor
-	cout << str1; // new line atmak gerekiyor
+	cout << str1 << endl; // new line atmak gerekiyor
 
+	// Printf ile string formatlama 
+	
+	printf("%40s\n", str1); 
+	printf("%-40s bosluk sonrasi gelen yazi\n", str1);
+	printf("%40.10s\n", str1);
 
 
 

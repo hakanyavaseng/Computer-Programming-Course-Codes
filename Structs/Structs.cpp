@@ -15,6 +15,7 @@ struct Obj
 
 int main(void)
 {
+	// Normal way
 	Obj	myObject;
 
 	myObject.boy = 10;
@@ -23,8 +24,15 @@ int main(void)
 	cout << "Boy: " << myObject.boy << ", En: " << myObject.en << endl;
 	cout << "Size of struct: " << sizeof(myObject) << " bytes." << endl;
 
+	//Pointer way
+	Obj* myPtr = &myObject;
 
+	myPtr->boy = 20;
+	myPtr->en = 40;
 
+	cout << "Using pointer: " << endl;
+	cout << "Boy: " << myObject.boy << ", En: " << myObject.en << endl;
+	cout << "Size of pointer: " << sizeof(myPtr) << " bytes." << endl;
 
 
 
